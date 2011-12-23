@@ -13,8 +13,8 @@ cnt = 1
 
 while line = grep_file.gets
   if line.match pattern
-    new_line = line.sub pattern, "#{RED}#{pattern}#{RESET}"
-    puts "#{cnt}: #{new_line}"
+    line.sub! pattern, "#{RED}#{pattern}#{RESET}"
+    puts "#{cnt}: #{line}"
   end
   cnt += 1
 end
